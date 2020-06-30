@@ -1,41 +1,32 @@
 <template>
-    <b-container class="bv-example-row">
-        <b-jumbotron header="Bootstrap Vue" lead="Bootstrap 4 Components for Vue.js 2" >
-        <p>For more information visit website</p>
-        <b-btn variant="primary" href="https://bootstrap-vue.js.org" target="_blank">More Info</b-btn>
-        </b-jumbotron>
-
-        <b-row>
-            <b-col>
-                <recent-posts-widget limit="5">Recent Posts</recent-posts-widget>
-            </b-col>
-            <b-col>
-                <pages-widget limit="5">Pages</pages-widget>
-            </b-col>
-            <b-col>
-                <h3>Welcome!</h3>
-                <p>You'll probably want to remove all of this stuff, but hey it at least gives you a preview of Bootstrap-Vue!</p>
-                <p>I would encourage you to avoid using jQuery and instead find the Vue way of doing some things. You'll thank me later!</p>
-                <p>~ <a href="http://evanagee.com/">Evan Agee</a></p>
-            </b-col>
-        </b-row>
-    </b-container>
+  <div class="page page--home">
+    <a href="https://vuewordpress.com">
+      <img src="https://res.cloudinary.com/evanagee/image/upload/c_scale,w_700/v1580244758/VueWP/VWP-hero.png" />
+    </a>
+    <h1 class="mt-6">Welcome!</h1>
+    <p>
+      You'll probably want to remove all of this stuff, but hey it at least it works!
+    </p>
+    <p>If you'd like to edit the contents of this page take a look at <code>src/components/Home.vue</code></p>
+    <p class="mb-10">
+      ~
+      <a href="https://evanagee.com/">Evan Agee</a>
+    </p>
+    <recent-posts-widget limit="5" class="mb-10">Recent Posts</recent-posts-widget>
+    <pages-widget limit="5">Pages</pages-widget>
+  </div>
 </template>
 
 <script>
-import RecentPostsWidget from './widgets/RecentPosts'
-import PagesWidget from './widgets/Pages'
+import RecentPostsWidget from './widgets/RecentPosts.vue';
+import PagesWidget from './widgets/Pages.vue';
 
 export default {
-    components: {
-        RecentPostsWidget,
-        PagesWidget
-    }
-}
+  components: {
+    RecentPostsWidget,
+    PagesWidget,
+  },
+};
 </script>
 
-<style lang="scss">
-    .jumbotron {
-        margin-top: 5%;
-    }
-</style>
+<style type="postcss"></style>
